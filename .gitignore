@@ -1,0 +1,4 @@
+**/*.zip
+.terraform
+.idea
+.DS_Store
