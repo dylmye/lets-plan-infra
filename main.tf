@@ -48,8 +48,15 @@ resource "google_project_iam_member" "service_account_fn_deploys_role_cloudfunct
   member  = "serviceAccount:${google_service_account.service_account_fn_deploys.email}"
 }
 
+# give the SA access to the app engine default user SA
+resource "google_service_account_iam_member" "service_account_impersonate_appengine_default_fn_deploys" {
+  service_account_id = data.google_service_account.service_account_app_engine_default.name
+  role               = "roles/iam.serviceAccountUser"
+  member             = google_service_account.service_account_fn_deploys.member
+}
+
 # Bind IAM policy for the SA to the Workload ID Pool
-resource "google_service_account_iam_binding" "admin-account-iam" {
+resource "google_service_account_iam_binding" "service_account_workload_id_access_fn_deploys" {
   service_account_id = google_service_account.service_account_fn_deploys.name
   role               = "roles/iam.workloadIdentityUser"
 
