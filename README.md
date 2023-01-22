@@ -4,11 +4,23 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/dylmye/lets-plan-infra/blob/main/LICENSE"><img alt="The status badge for the licence of this project" src="https://img.shields.io/github/license/dylmye/lets-plan-infra"></a>
+  <a href="https://snyk.io"><img alt="The status badge for the Snyk-detected vulnerabilities count for this project" src="https://img.shields.io/snyk/vulnerabilities/github/dylmye/lets-plan-infra?logo=snyk"></a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/dylmye/lets-plan">Webapp</a> •
+    <strong>Infrastructure</strong> •
+    <a href="https://github.com/dylmye/lets-plan-firebase-functions">Firebase Functions</a>
+</p>
+
+---
+
 ## Terraform Infrastructure
 
 A Terraform configuration for various non-Firebase parts of the Let's Plan infrastructure.
 
-----
 
 ### Install
 
